@@ -8,3 +8,8 @@ export function fetchData() {
 export function fetchDataRejects() {
     return Promise.reject(errorText);
 }
+
+export async function fetchDataWithCallback(callback: (error?: Error, data?: any) => void) {
+    const data = await fetchData();
+    callback(undefined, data);
+}
