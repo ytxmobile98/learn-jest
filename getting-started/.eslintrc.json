@@ -1,0 +1,10 @@
+{
+    "overrides": [
+        {
+            "files": ["src/**/*"],
+            "env": {
+                "jest": true
+            }
+        }
+    ]
+}
