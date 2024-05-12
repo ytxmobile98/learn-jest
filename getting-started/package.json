@@ -1,8 +1,10 @@
 {
     "scripts": {
-        "test": "jest"
+        "test": "jest",
+        "test:notify": "jest --notify"
     },
     "devDependencies": {
-        "jest": "^29.7.0"
+        "jest": "^29.7.0",
+        "node-notifier": "^10.0.1"
     }
 }
