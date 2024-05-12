@@ -128,6 +128,7 @@ const config: Config = {
   // A list of paths to directories that Jest should use to search for files in
   roots: [
     "getting-started/src",
+    "testing-asynchronous-code/src",
     "using-matchers/src",
   ],
 
