@@ -31,3 +31,25 @@ describe('mockImplementationOnce', () => {
         expect(results).toEqual(['first call', 'second call', 'default', 'default']);
     });
 });
+
+describe('chaining', () => {
+    test('mockReturnThis', () => {
+        const myObj = {
+            myMethod: jest.fn().mockReturnThis(),
+        };
+
+        // chaining works
+        expect(myObj.myMethod()).toBe(myObj);
+    });
+
+    test('function return this', () => {
+        const myObj = {
+            myMethod: jest.fn(function() {
+                return this
+            }),
+        };
+
+        // chaining works
+        expect(myObj.myMethod()).toBe(myObj);
+    });
+});
